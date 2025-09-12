@@ -1,5 +1,5 @@
 {
-  "name": "adorable-ablation",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "astro": "^5.13.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
