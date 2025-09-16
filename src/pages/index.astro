@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
     <h1>Natasja Saad</h1>
 
     <section>
-      <div>
+      <div class="blob">
         <h2>Motion graphic - website</h2>
         <p>En rejse gennem musikken, kulturen og Natasjas København.</p>
         <!-- YouTube embed -->
@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <div>
+      <div class="blob">
         <h2>Motion Graphic - meta ads</h2>
         <p>Se “Natasja for altid” og bliv klogere på hendes arv.</p>
         <div class="video-container">
@@ -36,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <div>
+      <div class="blob">
         <h2>Interaktivt kort</h2>
         <p>Oplev de steder, der formede Natasjas liv og fortælling.</p>
         <div id="map"></div>
@@ -58,8 +58,9 @@ import Layout from "../layouts/Layout.astro";
 
   h1 {
     font-family: "Anton", sans-serif;
-    font-size: 4rem;
-    color: #fff;
+    font-size: 6rem;
+    /* color: #de7432; */
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 3rem;
@@ -67,45 +68,31 @@ import Layout from "../layouts/Layout.astro";
   }
 
   section {
-    max-width: 700px;
+    max-width: 980px;
     width: 100%;
   }
 
   h2 {
     font-family: "Anton", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(250, 247, 247, 0.904);
-  }
-
-  section div {
-    margin-bottom: 2.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.44);
-    border-radius: 12px;
-    box-shadow: 2 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  section div.video-container {
-    background: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(163, 163, 163, 0.569);
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #333;
   }
 
-  section div {
-    margin-bottom: 2.5rem;
+  section .blob {
+    margin-bottom: 3.5rem;
     padding: 1rem;
     background: transparent;
     border-radius: 12px;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.368);
   }
 
   /* Tilføj denne, så video-container IKKE arver styling */
