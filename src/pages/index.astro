@@ -9,17 +9,37 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <div>
         <h2>Motion graphic - website</h2>
-        <p>En rejse gennem musikken, kulturen og stemmerne fra København.</p>
+        <p>En rejse gennem musikken, kulturen og Natasjas København.</p>
+        <!-- YouTube embed -->
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/DITT_VIDEO_ID"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
       </div>
 
       <div>
         <h2>Motion Graphic - meta ads</h2>
-        <p>Oplev de steder, der formede Natasjas liv og fortælling.</p>
+        <p>Se “Natasja for altid” og bliv klogere på hendes arv.</p>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/DITT_VIDEO_ID"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
       </div>
 
       <div>
         <h2>Interaktivt kort</h2>
-        <p>Se “Natasja for altid” og bliv klogere på hendes arv.</p>
+        <p>Oplev de steder, der formede Natasjas liv og fortælling.</p>
+        <div id="map"></div>
       </div>
     </section>
   </main>
@@ -69,8 +89,44 @@ import Layout from "../layouts/Layout.astro";
     box-shadow: 2 4px 12px rgba(0, 0, 0, 0.1);
   }
 
+  section div.video-container {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
   p {
     font-size: 1.1rem;
     color: #333;
+  }
+
+  section div {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Tilføj denne, så video-container IKKE arver styling */
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* sørger for at videoen holder sig inde */
+    background: none; /* fjerner evt. boks bagved */
+    box-shadow: none; /* ingen skygge */
+    border-radius: 0; /* hvis du ikke vil have afrundede hjørner */
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 </style>
